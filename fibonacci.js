@@ -10,6 +10,16 @@ function fibs(number) {
   return fibonacci;
 }
 
-for(let i = 0; i <= 8; i++) {
-  console.log(fibs(i));
+function fibsRec(number) {
+  if (number <= 2) return number === 2 ? [0, 1] : number === 1 ? [0] : [];
+
+  const previousFibonacci = fibsRec(number - 1);
+
+  return previousFibonacci.concat(
+    previousFibonacci.at(-1) + previousFibonacci.at(-2),
+  );
+}
+
+for (let i = 0; i <= 8; i++) {
+  console.log(fibsRec(i));
 }
