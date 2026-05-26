@@ -1,4 +1,6 @@
 function fibs(number) {
+  if (number <= 1) return number === 1 ? [0] : [];
+
   const fibonacci = [0, 1];
 
   for (let i = 2; i < number; i++) {
@@ -8,4 +10,6 @@ function fibs(number) {
   return fibonacci;
 }
 
-console.log(fibs(2));
+for(let i = 0; i <= 8; i++) {
+  console.log(fibs(i));
+}
