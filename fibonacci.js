@@ -23,3 +23,5 @@ function fibsRec(number) {
 for (let i = 0; i <= 8; i++) {
   console.log(fibsRec(i));
 }
+
+export { fibs, fibsRec };
